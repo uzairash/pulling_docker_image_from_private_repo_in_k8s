@@ -28,11 +28,10 @@ kind: Service
 metadata:
   name: weather-app-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: weather-app
   ports:
     - protocol: TCP
-      port: 3000
+      port: 80
       targetPort: 3000
-      # nodePort: 32000 
